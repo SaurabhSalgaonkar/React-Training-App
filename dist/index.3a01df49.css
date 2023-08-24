@@ -1,0 +1,45 @@
+.header-container {
+  color: #fff;
+  background-color: #081424;
+  justify-content: space-between;
+  width: 100vw;
+  height: 90px;
+  font-weight: bold;
+  display: flex;
+}
+
+.logo {
+  height: 50px;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+.nav-list ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list ul li {
+  margin: 10px;
+  padding: 5px;
+}
+
+.card {
+  border: 1px solid gray;
+  width: 60vw;
+  display: flex;
+}
+
+.couple-friendly-tag {
+  color: gray;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 80px;
+  margin: 10px 0;
+  padding: 5px 0;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */
