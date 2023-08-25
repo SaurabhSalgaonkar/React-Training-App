@@ -1,112 +1,71 @@
-import React from 'react'
+import React, { useReducer, useState } from 'react'
 import Card from '../../Card'
+import mockApiResponse from '../utils/mockResponse'
+import useGeneratePrice from '../hooks.js/useGeneratePrice'
+
+const reducer = (state, action) => {
+    console.log(action);
+    switch(action.type) {
+        case "UPDATE_HOTELS":
+            return {
+                ...state,
+                hotels: action.payload
+            } 
+        case "UPDATE_FILTER":
+            return {
+                ...state,
+                isFilter: action.payload
+            }
+        case "UPDATE_BUTTON_NAME":
+            return {
+                ...state,
+                buttonName: action.payload
+            }
+    }
+}
 
 const Body = () => {
-const mockApiResponse = [
-    {
-        id: 1,
-        name: 'Ginger',
-        ratings: 3,
-        img: 'https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg',
-        isCoupleFriendly: true,
-        isFreeCancellation: true
-    },
-    {
-        id: 2,
-        name: 'Fern',
-        img: 'https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg',
-        isCoupleFriendly: false,
-        isFreeCancellation: true,
-        ratings: 2
-    },
-    {
-        id: 3,
-        name: 'Oberoi',
-        img: 'https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg',
-        isCoupleFriendly: true,
-        isFreeCancellation: false,
-        ratings: 1
-    },
-    {
-        id: 1,
-        name: 'Ginger',
-        ratings: 3,
-        img: 'https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg',
-        isCoupleFriendly: true,
-        isFreeCancellation: true
-    },
-    {
-        id: 2,
-        name: 'Fern',
-        img: 'https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg',
-        isCoupleFriendly: false,
-        isFreeCancellation: true,
-        ratings: 2
-    },
-    {
-        id: 3,
-        name: 'Oberoi',
-        img: 'https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg',
-        isCoupleFriendly: true,
-        isFreeCancellation: false,
-        ratings: 1
-    },
-    {
-        id: 1,
-        name: 'Ginger',
-        ratings: 3,
-        img: 'https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg',
-        isCoupleFriendly: true,
-        isFreeCancellation: true
-    },
-    {
-        id: 2,
-        name: 'Fern',
-        img: 'https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg',
-        isCoupleFriendly: false,
-        isFreeCancellation: true,
-        ratings: 2
-    },
-    {
-        id: 3,
-        name: 'Oberoi',
-        img: 'https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg',
-        isCoupleFriendly: true,
-        isFreeCancellation: false,
-        ratings: 1
-    },
-    {
-        id: 1,
-        name: 'Ginger',
-        ratings: 3,
-        img: 'https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg',
-        isCoupleFriendly: true,
-        isFreeCancellation: true
-    },
-    {
-        id: 2,
-        name: 'Fern',
-        img: 'https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg',
-        isCoupleFriendly: false,
-        isFreeCancellation: true,
-        ratings: 2
-    },
-    {
-        id: 3,
-        name: 'Oberoi',
-        img: 'https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg',
-        isCoupleFriendly: true,
-        isFreeCancellation: false,
-        ratings: 1
+    const [ state, dispatch ] = useReducer(reducer, { hotels: mockApiResponse, isFilter: false, buttonName: 'Get Filtered hotels' })
+    const { price, computePrice, hotelName, updateHoteName } = useGeneratePrice();
+
+    React.useEffect(() => {
+        if(state.isFilter) {
+            dispatch({ type: "UPDATE_BUTTON_NAME", payload: "Get Unfiltered hotels"})
+        }
+        else {
+            dispatch({ type: "UPDATE_BUTTON_NAME", payload: "Get Filtered hotels"})
+        }
+    }, [state.isFilter])
+
+    const cardButtonClick = (ratings, hotelName) => {
+        computePrice(ratings);
+        updateHoteName(hotelName);
     }
-]
-  return (
-    <div className='container-card'>
-        <div className='cards-list'>
-        { mockApiResponse.map((hotel) => <Card key={hotel.id} details={hotel}/>) }
+    
+    const filterHotels = () => {
+        if(!state.isFilter) {
+            filteredData = mockApiResponse.filter((hotel) => hotel.ratings > 1);
+            console.log(filteredData);
+            dispatch({type: "UPDATE_HOTELS", payload: filteredData});
+            // setHotels(filteredData);
+        }
+        else {
+            dispatch({type: "UPDATE_HOTELS", payload: mockApiResponse});
+        }
+        dispatch({type: "UPDATE_FILTER", payload: !state.isFilter});
+
+    }
+    return (
+        <div className='container-card'>
+            <div>Currently displayed hotels on your page - {state.hotels.length}</div>
+            <div>Filer is {state.isFilter ? "active" : "inactive"}</div>
+            {price && hotelName && (<div>Your price of {hotelName} hotel is {price}</div>)}
+            <button onClick={filterHotels}>{state.buttonName}</button>
+            <div className='cards-list'>
+                {state.hotels.map((hotel) => <Card key={hotel.id} details={hotel} cardButtonClick={cardButtonClick}/>)}
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Body

@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Card = (props) => {
- console.log(props);
  const { img, name, ratings, isCoupleFriendly, isFreeCancellation } = props.details;
   return (
     <div className='card'>
@@ -13,6 +12,7 @@ const Card = (props) => {
         <span className='rating'style={{ fontSize: "28px", fontWeight: "bold", marginLeft: "10px" }}>{`${ratings} stars`}</span>
         {isCoupleFriendly ? <div className='couple-friendly-tag'>couple friendly</div> : null}
         {isFreeCancellation ? <div className='free-cancellation-tag'>Free cancellation</div> : null}
+        <button onClick={() => { props.cardButtonClick(ratings, name) }}>Check Price</button>
     </div>
 </div>
   )

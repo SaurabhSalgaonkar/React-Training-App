@@ -5,9 +5,6 @@ import Footer from './Footer'
 
 const App = () => {
   return (
-    //Header
-    //Body
-    //Footer
     <Fragment>
         <Header />
         <Body />
