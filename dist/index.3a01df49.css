@@ -2,7 +2,7 @@
   color: #fff;
   background-color: #081424;
   justify-content: space-between;
-  width: 100vw;
+  width: 99vw;
   height: 90px;
   font-weight: bold;
   display: flex;
@@ -26,7 +26,7 @@
 
 .card {
   border: 1px solid gray;
-  width: 60vw;
+  width: 50vw;
   display: flex;
 }
 
@@ -40,6 +40,43 @@
   padding: 5px 0;
   font-size: 10px;
   font-weight: bold;
+}
+
+.cards-list {
+  height: inherit;
+  width: 50vw;
+  padding: 20px;
+  position: relative;
+  top: 15%;
+  left: 40%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.container-card {
+  width: 60vw;
+  height: 60vh;
+}
+
+.footer-container {
+  background: #000;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 150px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-container img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer-text p {
+  font-weight: bold;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=index.3a01df49.css.map */

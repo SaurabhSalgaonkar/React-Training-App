@@ -27330,6 +27330,8 @@ var _header = require("./Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _body = require("./Body");
 var _bodyDefault = parcelHelpers.interopDefault(_body);
+var _footer = require("./Footer");
+var _footerDefault = parcelHelpers.interopDefault(_footer);
 const App = ()=>{
     return(//Header
     //Body
@@ -27338,18 +27340,23 @@ const App = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/components/App.js",
-                lineNumber: 11,
+                lineNumber: 12,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                 fileName: "src/components/App.js",
-                lineNumber: 12,
+                lineNumber: 13,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
+                fileName: "src/components/App.js",
+                lineNumber: 14,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/App.js",
-        lineNumber: 10,
+        lineNumber: 11,
         columnNumber: 5
     }, undefined));
 };
@@ -27363,7 +27370,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Header":"hsJbF","./Body":"8yaV8"}],"hsJbF":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Header":"hsJbF","./Body":"8yaV8","./Footer":"8pPOA"}],"hsJbF":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bfed = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27508,20 +27515,99 @@ const Body = ()=>{
             isCoupleFriendly: true,
             isFreeCancellation: false,
             ratings: 1
+        },
+        {
+            id: 1,
+            name: "Ginger",
+            ratings: 3,
+            img: "https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg",
+            isCoupleFriendly: true,
+            isFreeCancellation: true
+        },
+        {
+            id: 2,
+            name: "Fern",
+            img: "https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg",
+            isCoupleFriendly: false,
+            isFreeCancellation: true,
+            ratings: 2
+        },
+        {
+            id: 3,
+            name: "Oberoi",
+            img: "https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg",
+            isCoupleFriendly: true,
+            isFreeCancellation: false,
+            ratings: 1
+        },
+        {
+            id: 1,
+            name: "Ginger",
+            ratings: 3,
+            img: "https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg",
+            isCoupleFriendly: true,
+            isFreeCancellation: true
+        },
+        {
+            id: 2,
+            name: "Fern",
+            img: "https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg",
+            isCoupleFriendly: false,
+            isFreeCancellation: true,
+            ratings: 2
+        },
+        {
+            id: 3,
+            name: "Oberoi",
+            img: "https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg",
+            isCoupleFriendly: true,
+            isFreeCancellation: false,
+            ratings: 1
+        },
+        {
+            id: 1,
+            name: "Ginger",
+            ratings: 3,
+            img: "https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg",
+            isCoupleFriendly: true,
+            isFreeCancellation: true
+        },
+        {
+            id: 2,
+            name: "Fern",
+            img: "https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg",
+            isCoupleFriendly: false,
+            isFreeCancellation: true,
+            ratings: 2
+        },
+        {
+            id: 3,
+            name: "Oberoi",
+            img: "https://r1imghtlak.mmtcdn.com/ff0aa3dcff9011e89d770242ac110002.jpg?&output-quality=75&downsize=243:162&crop=243:162;0,7&output-format=jpg",
+            isCoupleFriendly: true,
+            isFreeCancellation: false,
+            ratings: 1
         }
     ];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "container-card",
-        children: mockApiResponse.map((hotel)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                details: hotel
-            }, hotel.id, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 34,
-                columnNumber: 44
-            }, undefined))
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "cards-list",
+            children: mockApiResponse.map((hotel)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
+                    details: hotel
+                }, hotel.id, false, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 106,
+                    columnNumber: 42
+                }, undefined))
+        }, void 0, false, {
+            fileName: "src/components/Body.js",
+            lineNumber: 105,
+            columnNumber: 9
+        }, undefined)
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 32,
+        lineNumber: 104,
         columnNumber: 5
     }, undefined);
 };
@@ -27637,6 +27723,94 @@ $RefreshReg$(_c, "Card");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["2UeK4","1xC6H","bB7Pu"], "bB7Pu", "parcelRequire1ddf")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bc7c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "footer-container",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "logo",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAAB7CAMAAABjGQ9NAAAAY1BMVEUAAAD///93d3f8/PzX19c2Njbo6Oj4+PgjIyPx8fGIiIjLy8uenp7U1NSpqam4uLiYmJivr6/i4uJVVVVqamq+vr5DQ0MvLy+QkJAcHBx9fX1vb28NDQ1dXV1PT08pKSkVFRXPqTbyAAADuUlEQVRoge2a24KiMAyGOUNBrFQFhEF8/6dc1JmRQ5M2pezuBd/VjNb+tqQ5NDrOzs7Ozs7Ozs4/43IosjzIr8c6/Ku6SS3cET6/yMd9WVcuue/OiRrJN+SSF1fxVcQL5Seim47rT4xV8inuiZn0PZIqPylGw8Ijm74whl2NpFNQeSD4WY+XvcwAWHbjukcD6QMm7brPTe7T6/d/B2ASgbwHc8SlB3HOfv+OgEnC17spUbpWSU+4A7N87x3tDJQk6RqaJvseQFo5bOESfqzptpjm94ie9KVPBtIh7+bT3D6DoDO4IFk6M5jXhocn4S5PcjcalmlqF/rKUemUzdO5uGI5jzcbqUHFAKElrMjZ+6EyydRT7+R7GtqeTEWBLwtvc8/I1cEuk86OI13TYhHRWSGdkA7YG7n3OC8HKkLLxdKqHechGRqjfqaxJT3yLWNEC2sro8gMBmRRDmg5AfjYr/IPQAgokDiIf8yB70szc9R4EvhzkTQA0bTxrDlAv/bSTmh7jp9YhZuKuddPxhO8+cAieE1R+goWnLrP3qE5IlVbyz+z4Fp3ZZVMI58axMpf6D/BOAqyjBK9XVVkTPSDIhll3XHfTlslbRaS12sf3uGNZrz6MEybu+JVsXvyknItAab9ikp54SUl6t9M4Zj2Z7M3WTha6NGqGzJ4qbWtNh7G8k21UWlVDb8O1Mwdp99SW3WnsOWmq8ocg3xbl1hZ5Gy3cMXjHjiTAjIF8LLjw1am7qtKuyebuHJpuS9hm8RFY8sHbluI+1q3GGZFtQrd6xvnYXKbgIPUsnNqy0cteuhrOyGxulVAvB+uuEVtmvSTS2HJ6rRvKR2nKdK2bb2aC0t5G6ERYrs0ISzbdjSLe7XiB7thnHAh/sSmc4EaJBClRd8CX6kBkLoBKAYNN1u7HgOdOBShnlcHnUv4BXbCuHbsnPJlIXtCy32U9dFEJ0EE8FbuO7W7OSE5rokmJi3lMdXJeO2GdjbhfDCKLXoZuQ4PahJFdeMw5Jsne6uuqSYnDH+zsYB+3RYs+9tG9HQXY8PCzZRXn+s3rbVeK5HuaOJWsP6bFrd7ezWrC/iDrnYuw6rqqyoMu7TIhWG+xgj15kh7OEdx7K/LETWa9XK6tVkS3LLVoFlT+mGtai1S07ULCwfr4RlkaX7QWvoJYsdpgSMuFH1OGo2+O8tseLEZrcadQ1SstS+QW8NzyKtGWWHrGYP04aXmWR6IiA1EkQjy7JieQ0vxWYtbP3jbsEoef1FzZ2dnZ2fn/+YP0zUybdHxnWYAAAAASUVORK5CYII="
+                        }, void 0, false, {
+                            fileName: "src/components/Footer.js",
+                            lineNumber: 7,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIMAAACDCAMAAACZQ1hUAAAAaVBMVEULCwv+/v4KCgoJCQkTExMAAADp6ekrKyt9fX0lJSX19fXi4uIcHBz7+/sEBAT4+PjPz8/W1tYYGBhycnIxMTHIyMiurq5ra2uKiorc3NxYWFi+vr48PDw2NjZTU1Onp6eXl5dFRUVjY2PMlHlQAAACkElEQVR4nO3bC3OiMBAA4JAHNJCHxkdLtfbx/3/k7aJ3B6id0Anh5tx1hAqd8LmJYdOxTCwekgm2cHAykIEMZCADGchABjKQgQxkuNmgUxjOOcEXMeD1Q/W2rbQJrLPENJ7SAJc8ve/apizLpm3Xq91u9xHTejqDUm/7uhhFaVw+A1d6b8eComgyGrg6ldeCvAb1fCMJeQ33CBkNSl8NxtwGrg53CPkM6nSPkM0g1G5xg/q8MyBzGl7uEvIZ2qtL27JdY7SHkMXg2HiGPLweKxMkRIghJDCoz9Hk8HKpHzCi2k5g+BoOyYOa2kICw2aYhtflDfa4hOFpYCi3/4ChIgMZyLCgQf2NK0Mv5rxfqEr/jjAyHHUv5HzrTWXK5k8Mb9226UW5iemYnxqKuIi6gc1sUPPVMPGGmNbmNZQLGOyoyl/lN3jvh4j9HAbxncH7uh7Wtx9zGIz4zlCPDU/JDdwFLbngsMK8NniPCNz2hsdXagOXxhgpjWQmmMJ6fMtw0RqGgMVugMEAP1+OAAfOxtW3U/JgtDYMbhBGm23R5b2uz+mHje+etuuP887CRzPxPYtLzaAvKsZ1ZXThrfXwgLeOBlvg9W2NvQGHMQ02dnqYZjAGDZgPfV7Tnhe2APEFZgEfde9E3EdzWl9AJ7iKCWNCwCWlxApBqo3FvMMG8+AbzdSluuCR1cwUgwhSiAB7GJzcwbKaS84k1DDd9IgbzH/FXGBOGvi1yHYnzQ+cwxP3QuALji/4jVoOD4vubHrDzXjsmpYMZCADGchABjKQgQxkIAMZyECGBzA8r1e9OOiYP9UnNnA1jMmEFN8D4cN/+PpBA//j90jJQAYykIEMZCADGchAhsc08KVDSCYXD/MLo0QulQTw3VUAAAAASUVORK5CYII="
+                        }, void 0, false, {
+                            fileName: "src/components/Footer.js",
+                            lineNumber: 8,
+                            columnNumber: 21
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Footer.js",
+                    lineNumber: 6,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "footer-text",
+                    style: {
+                        color: "white"
+                    },
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            children: "\xa9 2023 SAURABH PVT. LTD."
+                        }, void 0, false, {
+                            fileName: "src/components/Footer.js",
+                            lineNumber: 11,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: "ALL OVER WORLD"
+                            }, void 0, false, {
+                                fileName: "src/components/Footer.js",
+                                lineNumber: 13,
+                                columnNumber: 25
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Footer.js",
+                            lineNumber: 12,
+                            columnNumber: 21
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Footer.js",
+                    lineNumber: 10,
+                    columnNumber: 17
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Footer.js",
+            lineNumber: 5,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false);
+};
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["2UeK4","1xC6H","bB7Pu"], "bB7Pu", "parcelRequire1ddf")
 
 //# sourceMappingURL=index.3d214d75.js.map
