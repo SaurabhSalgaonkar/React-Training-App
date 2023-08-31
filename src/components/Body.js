@@ -2,6 +2,7 @@ import React, { useReducer, useState } from 'react'
 import Card from '../../Card'
 import mockApiResponse from '../utils/mockResponse'
 import useGeneratePrice from '../hooks.js/useGeneratePrice'
+import { useNavigate } from 'react-router-dom'
 
 const reducer = (state, action) => {
     console.log(action);
@@ -27,6 +28,7 @@ const reducer = (state, action) => {
 const Body = () => {
     const [ state, dispatch ] = useReducer(reducer, { hotels: mockApiResponse, isFilter: false, buttonName: 'Get Filtered hotels' })
     const { price, computePrice, hotelName, updateHoteName } = useGeneratePrice();
+    const navigate = useNavigate();
 
     React.useEffect(() => {
         if(state.isFilter) {
@@ -61,6 +63,7 @@ const Body = () => {
             <div>Filer is {state.isFilter ? "active" : "inactive"}</div>
             {price && hotelName && (<div>Your price of {hotelName} hotel is {price}</div>)}
             <button onClick={filterHotels}>{state.buttonName}</button>
+            <button onClick={() => navigate('Contact', { state: { value: 'some-value' } })}>Click me to go to Contact Page</button>
             <div className='cards-list'>
                 {state.hotels.map((hotel) => <Card key={hotel.id} details={hotel} cardButtonClick={cardButtonClick}/>)}
             </div>
