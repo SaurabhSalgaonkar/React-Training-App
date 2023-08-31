@@ -1,5 +1,6 @@
 import React from 'react'
 import { MY_HOTEL_NAME, NAV_HOME, NAV_HOTELS, NAV_CONTACT_US, HOTEL_LOGO } from '../utils/constants'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -11,9 +12,9 @@ const Header = () => {
         <div className='nav-container'>
             <div className='nav-list'>
                 <ul>
-                    <li>{NAV_HOME}</li>
-                    <li>{NAV_HOTELS}</li>
-                    <li>{NAV_CONTACT_US}</li>
+                    <li><Link to="/">{NAV_HOME}</Link></li>
+                    <li><Link to="Hotels">{NAV_HOTELS}</Link></li>
+                    <li><Link to="Contact">{NAV_CONTACT_US}</Link></li>
                 </ul>
             </div>
         </div>
